@@ -1,35 +1,56 @@
-<h1 align="center">Covid Statistics Algorithms</h1>
+# COVID-19 Statistics Algorithms
 
-### Description
-A program to find out `Covid Stats of Different Countries` using `Efficient Algorithms`.
+A C++ data-analysis project that applies classical algorithms to World Health Organization COVID-19 data to answer ranking, trend, allocation, and similarity questions.
 
-### Algorithms
-- Longest Increasing Subsequence (LIS).
-- Longest Decreasing Subsequence (LDS).
-- Knapsack Algorithm.
-- Longest Common Subsequence (LCS).
+[![C++ checks](https://github.com/SameetAsadullah/Covid-Stats-Algorithms/actions/workflows/quality.yml/badge.svg)](https://github.com/SameetAsadullah/Covid-Stats-Algorithms/actions/workflows/quality.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-### Functionalities
-- `Top 20 Countries` with the most confirmed cases on a given day.
-- `Highest New Cases` between two given dates.
-- `Longest Spread Period` for a given country (Used `LIS` for this functionality).
-- `Longest Daily Death Toll Decrease Period` for a given country (Used `LDS` for this functionality).
-- `Highest Possible Score` attainable for aid (Used `Knapsack` for this functionality).
-- `Compare the Response` of any two countries against the virus (Used `LCS` for this functionality).
+## Analyses
 
-### Manual
-1) You can `Change Covid Data` in the file named as `WHO-COVID-19.csv`.
-2) You can `Change Weight of Countries` using in knapsack algorithm in the file named as `CountryWeight.csv`.
-    
-### Working Screenshots
-<div align="center">
-  <img src = "https://github.com/SameetAsadullah/Covid-Stats-Algorithms/blob/main/extras/working-ss-1.png" alt = "" width="800px"/>
-</div>
-<br/>
-<div align="center">
-  <img src = "https://github.com/SameetAsadullah/Covid-Stats-Algorithms/blob/main/extras/working-ss-2.png" alt = "" width="800px"/>
-</div>
-<br/>
-<div align="center">
-  <img src = "https://github.com/SameetAsadullah/Covid-Stats-Algorithms/blob/main/extras/working-ss-3.png" alt = "" width="800px"/>
-</div>
+| Query | Technique |
+|---|---|
+| Top 20 countries by confirmed cases on a date | Priority queue / heap |
+| Highest new-case count in a date range | Priority queue and date filtering |
+| Longest increasing spread period | Longest increasing subsequence |
+| Longest decline in daily deaths | Longest decreasing subsequence |
+| Highest-scoring aid allocation under a capacity | 0/1 knapsack |
+| Similarity between two national response series | Longest common subsequence |
+
+## Repository layout
+
+- `src/main.cpp` — interactive query menu
+- `src/q1.h` through `src/q6.h` — the six analysis implementations
+- `src/functions.h` — shared validation and display helpers
+- `src/WHO-COVID-19.csv` — input observations
+- `src/CountryWeight.csv` — weights used by the aid-allocation query
+- `extras/` — example program output
+
+`src/graphs.cpp` is retained as a separate early edit-distance experiment and is not part of the main Visual Studio target.
+
+## Build and run
+
+```bash
+cd src
+g++ -std=c++17 -O2 main.cpp -o covid-stats
+./covid-stats
+```
+
+Run the executable from `src/` so it can locate the CSV inputs. Visual Studio users can instead open `src/Project.sln`.
+
+## Data
+
+The included `WHO-COVID-19.csv` is a historical snapshot used by the original university assignment. Replace it with data using the same column layout to explore another snapshot. Results should be understood in the context of the dataset date and are not current public-health guidance.
+
+## Screenshots
+
+| Menu | Query result | Analysis result |
+|---|---|---|
+| ![Program menu](extras/working-ss-1.png) | ![Query result](extras/working-ss-2.png) | ![Analysis result](extras/working-ss-3.png) |
+
+## Project status
+
+This repository preserves the original algorithm implementations while improving build portability, documentation, and repository hygiene.
+
+## License
+
+Released under the [MIT License](LICENSE).
