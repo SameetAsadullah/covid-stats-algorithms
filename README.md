@@ -2,7 +2,7 @@
 
 A C++ data-analysis project that applies classical algorithms to World Health Organization COVID-19 data to answer ranking, trend, allocation, and similarity questions.
 
-[![C++ checks](https://github.com/SameetAsadullah/Covid-Stats-Algorithms/actions/workflows/quality.yml/badge.svg)](https://github.com/SameetAsadullah/Covid-Stats-Algorithms/actions/workflows/quality.yml)
+[![C++ checks](https://github.com/SameetAsadullah/covid-stats-algorithms/actions/workflows/quality.yml/badge.svg)](https://github.com/SameetAsadullah/covid-stats-algorithms/actions/workflows/quality.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Analyses
