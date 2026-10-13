@@ -25,7 +25,7 @@ A C++ data-analysis project that applies classical algorithms to World Health Or
 - `src/CountryWeight.csv` — weights used by the aid-allocation query
 - `extras/` — example program output
 
-`src/graphs.cpp` is retained as a separate early edit-distance experiment and is not part of the main Visual Studio target.
+`src/graphs.cpp` is retained as a separate edit-distance experiment and is not part of the primary executable.
 
 ## Build and run
 
@@ -35,11 +35,11 @@ g++ -std=c++17 -O2 main.cpp -o covid-stats
 ./covid-stats
 ```
 
-Run the executable from `src/` so it can locate the CSV inputs. Visual Studio users can instead open `src/Project.sln`.
+Run the executable from `src/` so it can locate the CSV inputs. The bundled `src/Project.sln` provides an alternative Windows build configuration.
 
 ## Data
 
-The included `WHO-COVID-19.csv` is a historical snapshot used by the original university assignment. Replace it with data using the same column layout to explore another snapshot. Results should be understood in the context of the dataset date and are not current public-health guidance.
+The included `WHO-COVID-19.csv` is a historical analysis snapshot. Replace it with data using the same column layout to explore another period. Results should be understood in the context of the dataset date and are not current public-health guidance.
 
 ## Screenshots
 
@@ -49,7 +49,7 @@ The included `WHO-COVID-19.csv` is a historical snapshot used by the original un
 
 ## Project status
 
-This repository preserves the original algorithm implementations while improving build portability, documentation, and repository hygiene.
+The algorithm implementations are maintained with portable build instructions, focused documentation, and generated-file hygiene.
 
 ## License
 
