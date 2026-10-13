@@ -3,7 +3,7 @@
 #include<vector>
 #include<string>
 #include<fstream>
-#include"functions.h"
+#include "functions.h"
 using namespace std;
 
 struct q5Data { //STORES DATA FOR Q5
@@ -15,7 +15,7 @@ struct q5Data { //STORES DATA FOR Q5
 };
 
 void q5readFromFile(vector<q5Data> &v) {    //READS FROM FILE
-    fstream f1("WHO-COVID-19.csv", ios::in);
+    fstream f1("data/who-covid-19.csv", ios::in);
 
 	if (f1) {
         string countryName1, countryName2, temp;
@@ -76,7 +76,7 @@ void q5readFromFile(vector<q5Data> &v) {    //READS FROM FILE
     }
 
     f1.close();
-    f1.open("CountryWeight.csv", ios::in);
+    f1.open("data/country-weights.csv", ios::in);
 
     if (f1) {   //READING COSTS
         string name, cost;

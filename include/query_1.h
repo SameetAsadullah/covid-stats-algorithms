@@ -3,7 +3,7 @@
 #include<fstream>
 #include<string>
 #include<queue>
-#include"functions.h"
+#include "functions.h"
 using namespace std;
 
 struct q1Data {	//STORES DATA FOR Q1
@@ -18,7 +18,7 @@ struct q1CompareCases {	//USED TO COMPARE CASES IN HEAP
 };
 
 void q1ReadFromFile(priority_queue<q1Data, vector<q1Data>, q1CompareCases>& pQ, string date) { //READS DATA FROM THE FILE
-	fstream f1("WHO-COVID-19.csv", ios::in);
+	fstream f1("data/who-covid-19.csv", ios::in);
 	string temp;
 
 	if (f1) {

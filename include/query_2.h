@@ -3,7 +3,7 @@
 #include<fstream>
 #include<string>
 #include<queue>
-#include"functions.h"
+#include "functions.h"
 using namespace std;
 
 struct q2Data {	//STORES DATA FOR Q2
@@ -64,7 +64,7 @@ bool compareDates(string date1, string date2) {	//RETURNS TRUE IF DATE1 IS BEFOR
 }
 
 void q2ReadFromFile(priority_queue<q2Data, vector<q2Data>, q2CompareCases>& pQ, string lowerDate, string higherDate) {	//READS FROM FILE
-	fstream f1("WHO-COVID-19.csv", ios::in);
+	fstream f1("data/who-covid-19.csv", ios::in);
 	string temp;
 
 	if (f1) {

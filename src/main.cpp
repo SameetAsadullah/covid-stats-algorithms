@@ -1,10 +1,10 @@
-#include"q1.h"
-#include"q2.h"
-#include"q3.h"
-#include"q4.h"
-#include"q5.h"
-#include"q6.h"
-#include"functions.h"
+#include "query_1.h"
+#include "query_2.h"
+#include "query_3.h"
+#include "query_4.h"
+#include "query_5.h"
+#include "query_6.h"
+#include "functions.h"
 using namespace std;
 
 void displayMenu() {

@@ -4,7 +4,7 @@
 #include<string>
 #include<vector>
 #include<stack>
-#include"functions.h"
+#include "functions.h"
 using namespace std;
 
 struct q3Data {	//STROES DATA FOR Q3
@@ -13,7 +13,7 @@ struct q3Data {	//STROES DATA FOR Q3
 };
 
 void q3ReadFromFile(string country, vector<q3Data> &v) { //READS FROM FILE
-	fstream f1("WHO-COVID-19.csv", ios::in);
+	fstream f1("data/who-covid-19.csv", ios::in);
 	string temp;
 
 	if (f1) {

@@ -19,27 +19,26 @@ A C++ data-analysis project that applies classical algorithms to World Health Or
 ## Repository layout
 
 - `src/main.cpp` — interactive query menu
-- `src/q1.h` through `src/q6.h` — the six analysis implementations
-- `src/functions.h` — shared validation and display helpers
-- `src/WHO-COVID-19.csv` — input observations
-- `src/CountryWeight.csv` — weights used by the aid-allocation query
+- `include/query_1.h` through `include/query_6.h` — the six analysis implementations
+- `include/functions.h` — shared validation and display helpers
+- `data/who-covid-19.csv` — input observations
+- `data/country-weights.csv` — weights used by the aid-allocation query
 - `extras/` — example program output
 
-`src/graphs.cpp` is retained as a separate edit-distance experiment and is not part of the primary executable.
+`experiments/edit-distance.cpp` is retained as a separate algorithm experiment and is not part of the primary executable.
 
 ## Build and run
 
 ```bash
-cd src
-g++ -std=c++17 -O2 main.cpp -o covid-stats
-./covid-stats
+make
+./build/covid-stats
 ```
 
-Run the executable from `src/` so it can locate the CSV inputs. The bundled `src/Project.sln` provides an alternative Windows build configuration.
+Run the executable from the repository root so it can locate the CSV inputs.
 
 ## Data
 
-The included `WHO-COVID-19.csv` is a historical analysis snapshot. Replace it with data using the same column layout to explore another period. Results should be understood in the context of the dataset date and are not current public-health guidance.
+The included `data/who-covid-19.csv` is a historical analysis snapshot. Replace it with data using the same column layout to explore another period. Results should be understood in the context of the dataset date and are not current public-health guidance.
 
 ## Screenshots
 
